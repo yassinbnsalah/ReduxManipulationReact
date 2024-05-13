@@ -7,6 +7,7 @@ import { useDispatch } from "react-redux"
 import Movies from "./components/Movies"
 import NotFound from "./components/NotFound"
 import MovieDetails from "./components/MovieDetails"
+import Panier from "./components/Panier"
 
 
 function App() {
@@ -24,7 +25,7 @@ function App() {
         </Route>
         <Route path="/movie/:id" element={<MovieDetails />} />
         <Route path="/wishlist" element={<Whishlist />} />
-
+        <Route path="/panier" element={<Panier />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </React.Suspense>

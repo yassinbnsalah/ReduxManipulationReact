@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { GHADA0REACT, deleteitemFromWishlist, selectedwishlist } from '../redux/wishlistSlice'
 
 function Whishlist() {
+  // ken nheb wishlist tji m3abya mel lewel 
   const [wishlist] = useSelector(selectedwishlist);
   const dispatch = useDispatch();
   const removeItem = (item) =>{

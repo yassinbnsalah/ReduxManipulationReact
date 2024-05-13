@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom'
 import { addItemToWishlist } from '../redux/wishlistSlice';
+import { addItemToData } from '../redux/dataSlice';
 
 function Movie({ movie }) {
     const [rating , setRating] = useState();
@@ -16,6 +17,12 @@ function Movie({ movie }) {
       
           return () => clearTimeout(timer);
     }
+
+    const AddItemTOPanier = (movie) => {
+      dispatch(addItemToData(movie))
+
+    }
+
   return (
     <div>
         <p hidden={!visible}> Movie added with Success </p>
@@ -25,6 +32,7 @@ function Movie({ movie }) {
         movie Year : { movie?.year}<br></br>
         movie Description : { movie?.description}<br></br>
         <button onClick={() => addItemToWish(movie)}>Add To Maissa List</button>
+        <button onClick={() => AddItemTOPanier(movie)}> Add Item To Panier</button>
         <hr></hr>
     </div>
   )
