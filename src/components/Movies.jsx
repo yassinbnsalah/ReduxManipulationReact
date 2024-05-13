@@ -8,6 +8,7 @@ function Movies() {
   const [movies] = useSelector(selectedMovies);
   const [filteredMovies, setFilteredMovies] = useState([]);
     const Searching = () =>{
+      console.log(searchMovies);
         if (searchMovies.length>0){
             setFilteredMovies(movies.filter(movie => movie.title.toLowerCase().includes(searchMovies.toLowerCase())));
         }

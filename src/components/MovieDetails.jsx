@@ -17,7 +17,10 @@ function MovieDetails() {
   }, []);
   return (
     <div>
-     <Movie movie={movie}   ></Movie>
+      {movie ? ( <Movie movie={movie}   ></Movie>) : (
+        <>Not found</>
+      )}
+    
     </div>
   );
 }
