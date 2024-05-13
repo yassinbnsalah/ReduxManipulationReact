@@ -19,6 +19,10 @@ const wishlistSlice = createSlice({
     unselectwishlist(state) {
       state.selectedwishlist = null;
     },
+    clearWish : (state) =>{
+      state.wishlist =[]
+    }
+    ,
     deletewishlistReducer: (state, action) => {
       const payload = action.payload;
       state.wishlist = state.wishlist.filter(
@@ -66,6 +70,14 @@ export const addItemToWishlist = (state) => async (dispatch) => {
   }
 };
 
+export const GHADA0REACT = (state) => async (dispatch) => {
+  try {
+    dispatch(clearWish(state));
+  } catch (error) {
+    dispatch(setErrors(error));
+  }
+}
+
 export const deleteitemFromWishlist = (state) => async (dispatch) => {
   try {
     dispatch(deletewishlistReducer(state));
@@ -82,6 +94,7 @@ export const {
   selectwishlist,
   unselectwishlist,
   setErrors,
+  clearWish,
   deletewishlistReducer,
   updatewishlistReducer,
   addwishlistReducer,
