@@ -1,8 +1,31 @@
-# React + Vite
+# Account Microservice
+## Project Overview
+The Account Microservice is an Express.js-based service focused on managing user accounts, including authentication, user role assignment, and retrieval of user details. This service supports Google-based login and registration and integrates with a Notification Microservice to send notifications for new authentications. Comprehensive API documentation is provided using Swagger.
+## Features
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- Google Authentication: Users can log in or register using their Google credentials.
+- Role Management: Each user is assigned a role, either "Client" or "Admin."
+- Notification Integration: Sends a new authentication notification via the Notification Microservice.
+- Client and Admin Retrieval: Supports endpoints to retrieve all clients or the admin user.
 
-Currently, two official plugins are available:
+## Installation
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Install Micro-service Notification Server
+
+```bash
+    git clone https://github.com/belzir-studyCase/ms-account.git
+    cd ms-account
+```
+Install dependencies:
+
+```bash
+    npm install
+```
+
+Run Server
+
+```bash
+    npm run dev
+```
+
+
